@@ -10,7 +10,10 @@ jobs:
         py-version: [3.10, 3.11, 3.12]
         exclude:
           - py-version: 3.10
-            os: [ubuntu-latest, macos-14]
+            os: macos-14
+        exclude:
+          - py-version: 3.10
+            os: ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
     - name: Set up Python
