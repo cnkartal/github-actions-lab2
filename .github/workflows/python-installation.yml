@@ -11,8 +11,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - name: Set up Python
+      if: always()
       uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.py-version }}
         
-        
+
